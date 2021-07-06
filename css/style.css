@@ -45,7 +45,9 @@ body {
   font-size: var(--fs-body);
   line-height: 1.6;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 section {
   padding: 5em 2em;
 }
@@ -187,6 +189,25 @@ header {
   z-index: 1000;
 }
 
+.nav-open .nav{
+  transform: translateX(0);
+  
+}
+.nav-open .nav-toggle{
+  position: fixed;
+}
+
+.nav-open .hamburger{
+  transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before{
+  transform: rotate(90deg) translateX(-6px);
+}
+.nav-open .hamburger::after{
+  opacity: 0;
+
+}
 .hamburger {
   display: block;
   position: relative;
